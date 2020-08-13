@@ -290,22 +290,89 @@
 // Functions. Task1
 /////////////////////////////////////////////////////
 
-let num4 = +prompt("Введите натуральное число");
+// function isPrime(num4) {
+//   if (num4 < 2 || isNaN(num4)) {
+//     return false;
+//   }
+//   for (let i = 2; i < num4; i++) {
+//     if (num4 % i === 0) {
+//       return false;
+//     } else continue;
+//   }
+//   return true;
+// }
 
-function isPrime() {
-  for (let i = num4 - 1; i > 1; i--) {
-    if (num4 % i === 0) {
-      console.log(`Число ${num4} не является простым`);
-      break;
-    }
-  }
+// let num4 = +prompt("Введите натуральное число");
+// let result = isPrime(num4);
+// console.log(result);
 
-  for (let i = num4 - 1; i > 1; ) {
-    if (num4 % i !== 0) {
-      i--;
-    }
-    console.log(`Число ${num4} является простым`);
-  }
-}
+/////////////////////////////////////////////////////
+// Functions. Task2
+/////////////////////////////////////////////////////
 
-isPrime();
+// function checkMultiplicity(a, b) {
+//   if (isNaN(a) || isNaN(b)) {
+//     return false;
+//   }
+//   return !(a % b);
+// }
+
+// let a = +prompt("Введите первое число");
+// let b = +prompt("Введите второе число");
+// let result2 = checkMultiplicity(a, b);
+// console.log(result2);
+
+/////////////////////////////////////////////////////
+// Functions. Task3
+/////////////////////////////////////////////////////
+
+// function isTriangle(x, y, z) {
+//   return x + y > z && x + z > y && y + z > x;
+// }
+
+// let x = +prompt("Введите длину стороны треугольника x");
+// let y = +prompt("Введите длину стороны треугольника y");
+// let z = +prompt("Введите длину стороны треугольника z");
+// let result3 = isTriangle(x, y, z);
+// if (result3) {
+//   console.log("Треугольник возможен");
+// } else {
+//   console.log("Треугольник невозможен");
+// }
+
+/////////////////////////////////////////////////////
+// Functions. Task4
+/////////////////////////////////////////////////////
+
+// function calcRectangleArea(c, d) {
+//   return c * d;
+// }
+
+// let c = +prompt("Введите длину стороны прямоугольника c");
+// let d = +prompt("Введите длину стороны прямоугольника d");
+// console.log(`Площадь прямоугольника = ${calcRectangleArea(c, d)}`);
+
+// // Вычисление через длину стороны и высоту треугольника:
+// function calcTriangleArea(e, h) {
+//   return (e * h) / 2;
+// }
+
+// let e = +prompt("Введите длину стороны треугольника e");
+// let h = +prompt("Введите высоту треугольника h");
+// console.log(`Площадь треугольника = ${calcTriangleArea(e, h)}`);
+
+// // Вычисление через длины трех сторон треугольника:
+// function calcTriangleArea2(g, f, k) {
+//   let p = (g + f + k) / 2;
+//   return (p * (p - g) * (p - f) * (p - k)) ** (1 / 2);
+// }
+
+// let g = +prompt("Введите длину стороны треугольника g");
+// let f = +prompt("Введите длину стороны треугольника f");
+// let k = +prompt("Введите длину стороны треугольника k");
+// console.log(`Площадь треугольника = ${calcTriangleArea2(g, f, k)}`);
+
+/////////////////////////////////////////////////////
+// Objects. Task1
+/////////////////////////////////////////////////////
+
