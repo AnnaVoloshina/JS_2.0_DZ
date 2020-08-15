@@ -509,26 +509,27 @@ function MyArray() {
 
   // Метод POP:
   this.pop = function () {
-    for (let i = this.length - 1; this.length > 0; i--) {
-      let lastItem = this[this.length - 1];
-      delete MyArray[this.length - 1];
-      this.length = this.length - 1;
-      return lastItem;
-    }
+    let lastItem = this[this.length - 1];
+    delete MyArray[this.length - 1];
+    this.length = this.length - 1;
+    return lastItem;
   };
 
   // Метод PUSH:
   this.push = function () {
-    let lastItem = prompt("Введите новый элемент массива");
-    this.length = this.length + 1;
-    this[this.length - 1] = lastItem;
-    return this.length;
+    let lastItem;
+    while (lastItem) {
+      lastItem = prompt("Введите новый элемент массива");
+      this.length = this.length + 1;
+      this[this.length - 1] = lastItem;
+      return this.length;
+    }
   };
 
-  // Метод ForEACH (ОШИБКА!!!):
+  // Метод ForEACH:
   this.forEach = function (someFunc) {
     for (let i = 0; i < this.length; i++) {
-      this[i] = someFunc(this[i]);
+      someFunc(this[i]);
     }
   };
 }
@@ -542,12 +543,4 @@ console.log(myArr.pop());
 // Проверяем метод PUSH:
 console.log(myArr);
 console.log(myArr.push());
-console.log(myArr);
-
-// Проверяем метод ForEACH (ОШИБКА!!!):
-console.log(myArr);
-function double(k) {
-  return k * 2;
-}
-console.log(myArr.forEach(double()));
 console.log(myArr);
