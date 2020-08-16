@@ -510,7 +510,7 @@ function MyArray() {
   // Метод POP:
   this.pop = function () {
     let lastItem = this[this.length - 1];
-    delete MyArray[this.length - 1];
+    delete this[this.length - 1];
     this.length = this.length - 1;
     return lastItem;
   };
@@ -529,18 +529,9 @@ function MyArray() {
   // Метод ForEACH:
   this.forEach = function (someFunc) {
     for (let i = 0; i < this.length; i++) {
-      someFunc(this[i]);
+      someFunc(this[i], i, this);
     }
   };
 }
 
 const myArr = new MyArray(654, 2478, 2, 74189, 741);
-
-// Проверяем метод POP:
-console.log(myArr);
-console.log(myArr.pop());
-
-// Проверяем метод PUSH:
-console.log(myArr);
-console.log(myArr.push());
-console.log(myArr);
